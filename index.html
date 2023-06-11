@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hiking</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="assets/icons/fontawesome-free-6.4.0-web/css/fontawesome.css"
+    />
+    <link
+      href="assets/icons/fontawesome-free-6.4.0-web/css/brands.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/icons/fontawesome-free-6.4.0-web/css/solid.css"
+      rel="stylesheet"
+    />
+    <!-- Preload Image -->
+    <link rel="preload" as="image" href="Images/Bukit.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <img src="Images/Logo.png" alt="The King" class="logo" />
+          <h1>The <span class="king">King</span></h1>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <!-- <li class="hamburger">
+            <a href="">
+              <div class="bar"></div>
+            </a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <img src="Images/Background.png" alt="" class="bg-img" />
+      <img src="Images/Gunung Tengah.png" alt="" class="gunung-tengah" />
+      <h1>The Hi<span class="king">king</span></h1>
+      <img src="Images/Gunung Kiri.png" alt="" class="gunung-kiri" />
+      <img src="Images/Gunung Kanan.png" alt="" class="gunung-kanan" />
+      <img src="Images/Bukit.png" alt="" class="bg-img bg-front" />
+    </main>
+    <section id="about">
+      <img src="Images/Backgound-Tebing.jpg" alt="" class="bg-tebing" />
+      <img src="Images/Tebing.png" alt="" class="animate-on-scroll tebing" />
+      <h1 class="animate-on-scroll">
+        Be The <span class="king">King</span> of <br />Mountain
+      </h1>
+      <h4 class="animate-on-scroll">
+        <span class="head-font">Selamat datang di The Di Hiking</span>, di mana
+        setiap langkah adalah sebuah perjalanan, dan setiap perjalanan adalah
+        sebuah petualangan tak terlupakan. Bersiaplah untuk menjelajah keindahan
+        alam yang luar biasa bersama kami. Saatnya melangkah ke alam liar,
+        menatap keindahan yang tak tergantikan, dan merasakan kekuatan dan
+        ketenangan alam. The Hiking siap membawamu ke destinasi-destinasi
+        menakjubkan yang tidak akan pernah kamu lupakan. Tunggu apa lagi?
+        <button class="btn"><a href="#contact">Bergabunglah!</a></button
+        ><a href="#contact"></a>dengan kami di The Hiking dan bersiaplah untuk
+        petualangan pendakian yang indah, bagus, dan nyaman.
+      </h4>
+    </section>
+
+    <section id="contact">
+      <div class="box">
+        <h1>Contact Us!</h1>
+        <div>
+          <form action="php/index.php" method="post">
+            <div class="inputBox">
+              <input type="text" name="username" id="username" class="input-form" required/>
+              <label for="username">Nama Lengkap</label>
+            </div>
+            <div class="inputBox">
+              <input type="email" name="email" id="email" class="input-form" required/>
+              <label for="email">Email</label>
+            </div>
+            <div class="inputBox">
+              <input type="number" name="no-hp" id="no-hp" class="number input-form" required maxlength="12"/>
+              <label for="no-hp">No HP (Whatsapp)</label>
+            </div>
+            <div class="inputBox">
+              <input type="text" name="message" id="message" class="input-form" required maxlength="100"/>
+              <label for="message" class="label">Message</label>
+            </div>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div>
+        <img src="Images/Logo.png" alt="" class="logo">
+      </div>
+      <div>
+        <h3>&#169; Rayhan </h3>
+      </div>
+      <div>
+        <ul>
+          <li><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+          <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+          <li><a href="https://www.github.com"><i class="fa-brands fa-github fa-xl"></i></a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

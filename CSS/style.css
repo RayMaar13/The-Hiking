@@ -1,0 +1,522 @@
+@import url(font.css);
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.king {
+  color: rgb(50, 81, 86);
+  text-shadow: 1px 2.3px rgb(32, 51, 54);
+}
+
+.logo {
+  width: 50px;
+}
+
+header div h1 {
+  color: #fff;
+}
+header nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header ul li {
+  transition: all 200ms ease-in;
+}
+
+header ul li:hover {
+  transform: scale(1.2);
+}
+
+
+header ul a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.83rem;
+  transition: all 200ms ease-out;
+}
+
+.hamburger {
+  padding-left: 1.5rem;
+}
+
+.hamburger a {
+  padding: 0;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  border-radius: 50%;
+  background-color: rgba(115, 115, 115, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger .bar {
+  position: relative;
+  width: 52%;
+  height: 1.7px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger .bar::before, .hamburger .bar::after {
+  content: "";
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  width: 60%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 2px;
+}
+
+.hamburger .bar::before {
+  top: -4.5px;
+}
+
+.hamburger .bar::after {
+  top: 4.5px;
+}
+
+
+main {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 30px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  
+}
+
+.bg-front {
+  z-index: 5;
+  animation-name: showUp;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.gunung-tengah {
+  position: absolute;
+  width: 50%;
+  top: calc(50% + 120px);
+  left: calc(50% + 70px);
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  animation-name: showUp;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.gunung-kiri {
+  position: absolute;
+  width: 50%;
+  top: calc(50% + 170px);
+  left: calc(50% - 400px);
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  animation-name: showUp;
+  animation-duration: 1.25s;
+  animation-delay: 1.25s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+}
+
+.gunung-kanan {
+  position: absolute;
+  width: 50%;
+  top: calc(50% + 150px);
+  left: calc(50% + 440px);
+  transform: translate(-50%,-50%);
+  z-index: 3;
+  animation-name: showUp;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+
+}
+
+main h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  position: absolute;
+  top: calc(50% + 100px);
+  left: calc(51% - 20px);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  animation-name: showUp;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+#about {
+  position: relative;
+  z-index: 6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-tebing {
+  position: absolute;
+  width: 100%;
+  top: calc(50% - 30px);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 1;
+}
+
+.tebing {
+  position: absolute;
+  width: 80%;
+  top: calc(50% + 110px);
+  left: calc(50% - 155px);
+  z-index: 3;
+}
+
+#about h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 9px;
+  text-transform: uppercase;
+  text-align: right;
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(51% - 360px);
+  z-index: 2;
+}
+
+#about h4 {
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  line-height: 30px;
+  position: absolute;
+  width: 40%;
+  top: calc(50% + 50px);
+  left: calc(50% + 280px);
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.head-font {
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.animate-on-scroll.animate {
+  animation-name: showUp;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(61, 86, 90);
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 4px 8px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: rgb(155, 236, 248);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+#contact {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(61, 86, 90);
+  position: relative;
+}
+
+#contact .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 600px;
+  width: 900px;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  padding: 40px;
+  background: rgb(255, 255, 255, .4);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+  border-radius: 10px;
+}
+
+.box h1{
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+  top: -18px;
+  left: 0;
+  color: rgb(61, 86, 90);
+  font-size: 14px;
+}
+
+
+.box input[type="submit"]{
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: rgb(61, 86, 90);
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+form .number::-webkit-inner-spin-button, 
+form .number::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+table {
+  border-spacing: 10px;
+  color: #fff;
+}
+
+#data {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(61, 86, 90);
+  position: relative;
+}
+
+.text-up {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.box .title {
+  width: 100px;
+  color: rgb(50, 81, 86);
+}
+
+.text-down {
+  align-items: flex-end;
+  display: flex;
+  margin-top: 20px;
+  margin-left: auto;
+  border: none;
+  border-radius: 15px;
+  padding: 7px 25px;
+  background-color: rgb(32, 51, 54);
+  transition: all 200ms ease-in-out;
+}
+
+.text-down a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.text-down:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 25px;
+  background-color: rgb(32, 51, 54);
+  color: #fff;
+}
+
+footer h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+footer ul li a{
+  color: #fff;
+}
+
+
+@media screen and (min-width: 1700px) {
+  .gunung-tengah {
+    top: calc(50% + 165px);
+    left: calc(50% + 77px);
+  }
+
+  .gunung-kiri {
+    top: calc(50% + 212px);
+    left: calc(50% - 484px);
+  }
+
+  .gunung-kanan {
+    top: calc(50% + 212px);
+    left: calc(50% + 593px);
+  }
+
+  .tebing {
+    top: calc(50% + 170px);
+    left: calc(50% - 197px);
+  }
+
+  #about h4 {
+    top: calc(50% - 10px);
+    left: calc(50% + 320px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gunung-tengah {
+    top: calc(50% + 90px);
+    left: calc(50% + 57px);
+  }
+
+  .gunung-kiri {
+    top: calc(50% + 129px);
+    left: calc(50% - 320px);
+  }
+
+  .gunung-kanan {
+    top: calc(50% + 118px);
+    left: calc(50% + 356px);
+  }
+
+  main h1 {
+    top: calc(50% + 75px);
+    left: calc(51% - 22px);
+  }
+
+  .tebing {
+    top: calc(50% + 170px);
+    left: calc(50% - 197px);
+  }
+
+  #about h4 {
+    top: calc(50% - 10px);
+    left: calc(50% + 320px);
+  }
+}
+
+@keyframes showUp {
+  from {
+    transform: translate(-50%, 50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
